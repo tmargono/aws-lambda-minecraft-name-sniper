@@ -11,7 +11,7 @@ https://urllib3.readthedocs.io/en/latest/user-guide.html
 
 https://github.com/urllib3/urllib3
 
-## Information
+## Information/Setup
 
 To get bearer token, login to Minecraft account and look for bearer_token cookie.
 The token will expire in roughly 2 hours.
@@ -29,5 +29,7 @@ When scheduling the Cloudwatch alarm, times in cron expression are UTC. See http
 
 JSON Format:
 `{'name':'test', 'token':'test', 'delay':1}`
+
+When setting up the Lambda function, be sure to change the timeout to a larger value (default is 3 sec) so that the function doesn't timeout while it is being delayed.
 
 
