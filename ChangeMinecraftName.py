@@ -2,7 +2,7 @@ import urllib3, time
 
 def lambda_handler(event, context):
     https = urllib3.PoolManager()
-    wantedName = event.get(wantedName)
+    wantedName = event.get(name)
     token = event.get(token)
     delay = event.get(delay)
     
