@@ -2,9 +2,9 @@ import urllib3, time
 
 def lambda_handler(event, context):
     https = urllib3.PoolManager()
-    wantedName = event.get(name)
-    token = event.get(token)
-    delay = event.get(delay)
+    wantedName = event.get('name')
+    token = event.get('token')
+    delay = event.get('delay')
     
     #Delay for specified seconds because Cloudwatch rule smallest increment of time is minutes
     time.sleep(delay)
