@@ -27,4 +27,7 @@ It is therefore difficult to schedule exactly when the Lambda function will run.
 
 When scheduling the Cloudwatch alarm, times in cron expression are UTC. See https://docs.aws.amazon.com/lambda/latest/dg/services-cloudwatchevents-expressions.html for more information. Pass into the Lambda function a json object containing the name, bearer token, and delay (seconds).
 
+JSON Format:
+`{'name':'test', 'token':'test', 'delay':1}`
+
 
